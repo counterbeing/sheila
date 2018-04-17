@@ -17,6 +17,7 @@ body {
   padding: 10em;
   background-color: #442f50;
   text-align: center;
+  border-radius: 0;
 }
 
 h1 {
