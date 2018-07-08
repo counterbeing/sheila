@@ -5,12 +5,32 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><%= current_page.data.title || "Sheila Vaughn Ph. D." %></title>
+    <title><%= current_page.data.title || "Sheila Vaughn, Ph. D." %></title>
     <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <%= yield %>
-  </body>
+  <nav class="navbar navbar-expand-md navbar-custom fixed-top">
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/bio.html">Bio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="navbar-spacer"> </div>
+
+  <%= yield %>
+</body>
 </html>
