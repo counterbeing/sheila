@@ -24,12 +24,17 @@
           <a class="nav-link" href="./bio.html">Bio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Get Started</a>
+          <a class="nav-link" href="./getting-started.html">Get Started</a>
         </li>
       </ul>
     </div>
   </nav>
   <div class="navbar-spacer"> </div>
+
+
+  <% locals = current_page.metadata.fetch(:page) %>
+
+  <%= partial :header, locals: locals if locals.fetch(:image, nil) %>
 
   <%= yield %>
 </body>
